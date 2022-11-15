@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'Vezba6-IT255'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Vezba6-IT255');
+    expect(app.pageheader).toEqual('Vezba6-IT255');
   });
 
   it('should render title', () => {

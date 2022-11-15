@@ -1,0 +1,32 @@
+.btn-group button {
+    background-color: #04AA6D; /* zelena pozadina*/
+    border: 1px solid green; /* zelena granica */
+    color: white; /* beli tekst */
+    padding: 10px 24px; /* rastojanje */
+    cursor: pointer; /* pokazivač */
+    float: left; /* plutajući dugmići */
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* sprečavanje duplih granica */
+  }
+  
+  /* brisanje plutanja */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* pozadina nakon markacije mišem */
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
+  table, th, td {
+    border: 1px solid;
+  }
+
+  td {
+    text-align: center;
+  }

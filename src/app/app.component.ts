@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  name: string = 'Angular - IT255';
+  pageheader: string = 'Angular - IT255';
 }

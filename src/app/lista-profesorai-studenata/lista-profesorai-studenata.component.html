@@ -1,0 +1,22 @@
+<br>
+
+<div class="btn-group">
+    <button (click)="onProfesori()">Profesori</button>
+    <button (click)="onStudenti()">Studenti</button>
+</div>
+<br>
+
+<table>
+    <tr>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Titula</th>
+        <th>Kvalifikacija</th>
+    </tr>
+    <tr *ngFor="let osoba of osobe">
+        <td> {{ osoba.ime }} </td>
+        <td> {{ osoba.prezime }} </td>
+        <td> {{ osoba.titula }} </td>
+        <td> {{ osoba.kvalifikacija }} </td>
+    </tr>
+</table>

@@ -15,11 +15,7 @@ export class StudentcomponentComponent implements OnInit {
   }
 
   addInfo(ime: HTMLInputElement, prezime: HTMLInputElement, titula: HTMLSelectElement, kvalifikacija: HTMLInputElement):boolean{
-    this.osoba = new Osoba();
-    this.osoba.ime = ime.value;
-    this.osoba.prezime = prezime.value;
-    this.osoba.titula = titula.value;
-    this.osoba.kvalifikacija = kvalifikacija.value;
+    this.osoba = new Osoba(ime.value, prezime.value, titula.value, kvalifikacija.value);
     return false;
   }
 
