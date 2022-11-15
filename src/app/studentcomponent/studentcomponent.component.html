@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <form>
+        <label for="ime">Unesite ime:</label><br>
+        <input type="text" name="ime" #ime><br>
+        <label for="prezime">Unesite prezime:</label><br>
+        <input type="text" name="prezime" #prezime><br><br>
+        <label for="titula">Izaberite titulu:</label>
+        <select name="titula" #titula>
+            <option value="student">Student</option>
+            <option value="profesor">Profesor</option>
+        </select><br>
+        <label for="kvalifikacija">Unesite kvalifikaciju:</label><br>
+        <input type="text" name="kvalifikacija" #kvalifikacija><br><br>
+        <input type="submit" value="Submit" (click)="addInfo(ime, prezime, titula, kvalifikacija)">
+    </form>
+
+    <table>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Titula</th>
+            <th>Obrazovanje</th>
+        </tr>
+        <tr>
+            <td> {{ osoba.ime }} </td>
+            <td> {{ osoba.prezime }} </td>
+            <td> {{ osoba.titula }} </td>
+            <td> {{ osoba.kvalifikacija }} </td>
+        </tr>
+    </table>
+</body>
+
+</html>
