@@ -1,0 +1,60 @@
+<div style="text-align:left">
+    <h1>
+        Primer forme
+    </h1>
+    <table>
+        <tr>
+            <th>
+                <form [formGroup]="angForm" novalidate>
+                    <div class="form-group">
+                        <label class="center-block">Ime:
+                            <input type="text" class="form-control" formControlName="ime">
+                        </label><br>
+
+                        <label class="center-block">Prezime:
+                            <input type="text" class="form-control" formControlName="prezime">
+                        </label><br>
+
+                        <label class="center-block">Broj indeksa:
+                            <input type="text" min="1000" max="9999" class="form-control" formControlName="brIndeksa">
+                        </label><br><br>
+                    </div>
+                    <div class="messages">
+                        <div *ngIf="angForm.controls['ime'].invalid && (angForm.controls['ime'].dirty || angForm.controls['ime'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="$any(angForm.controls['ime']).errors.required">
+                                Ime je obavezno!!!
+                            </div>
+                        </div>
+
+                        <div *ngIf="angForm.controls['prezime'].invalid && (angForm.controls['prezime'].dirty || angForm.controls['prezime'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="$any(angForm.controls['prezime']).errors.required">
+                                Prezime je obavezno!!!
+                            </div>
+                        </div>
+
+                        <div *ngIf="angForm.controls['brIndeksa'].invalid && (angForm.controls['brIndeksa'].dirty || angForm.controls['brIndeksa'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="$any(angForm.controls['brIndeksa']).errors.required">
+                                Broj indeksa je obavezan!!!
+                            </div>
+                        </div>
+
+                        <div *ngIf="(angForm.controls['brIndeksa'].dirty || angForm.controls['brIndeksa'].touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="!indeksValidation(angForm.controls['brIndeksa'].value)">
+                                Indeks mora biti broj i mora da je veci od 1000 i manji od 9999!!!
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </th>
+            <th>
+                <p>Vrednost forme: {{ angForm.value | json }}</p>
+                <p>Status forme: {{ angForm.status | json }}</p>
+            </th>
+        </tr>
+    </table>
+</div>

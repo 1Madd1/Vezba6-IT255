@@ -1,0 +1,8 @@
+<div class="http">
+    <h2>osnovni zahtev</h2>
+    <button type="button" (click)="makeRequest()">Uputi GET zahtev</button>
+    <button type="button" (click)="makePost()">Uputi POST zahtev</button>
+    <button type="button" (click)="makeDelete()">Uputi DELETE zahtev</button>
+    <div *ngIf="loading">loading...</div>
+    <pre>{{data | json}}</pre>
+</div>
