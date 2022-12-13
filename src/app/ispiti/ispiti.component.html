@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>Naziv</th>
+        <th>Broj poena</th>
+        <th>Max poena</th>
+        <th>Ocena</th><!--http://localhost:8080/CS230_PZ/webresources/entiteti.knjiga/-->
+        <th>Datum polaganja</th>
+    </tr>
+    <tr *ngFor="let ispit of ispiti">
+        <td> {{ ispit.naziv }} </td>
+        <td> {{ ispit.brPoena }} </td>
+        <td> {{ ispit.maxPoena }} </td>
+        <td> {{ ispit.ocena }} </td>
+        <td> {{ ispit.datumPolaganja }} </td>
+    </tr>
+</table>

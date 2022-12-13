@@ -11,12 +11,29 @@
   <div>
     <h1>{{pageheader}}</h1>
   </div>
-  <!--<app-studentcomponent></app-studentcomponent>-->
-  <app-buttongroupcomponent></app-buttongroupcomponent>
-  <app-lista-profesorai-studenata></app-lista-profesorai-studenata>
-  <app-forma></app-forma>
-  <app-di></app-di>
-  <app-simple-http></app-simple-http>
+  <div class="page-header">
+    <div class="container">
+      <h2>Rutiranje - primer</h2>
+      <div class="navLinks">
+        <a [routerLink]="['/student']">Komponenta student</a>
+        ||
+        <a [routerLink]="['/buttongroup']">ButtonGroup komponenta</a>
+        ||
+        <a [routerLink]="['/forma']">Forma</a>
+        ||
+        <a [routerLink]="['/di']">Angular DI</a>
+        ||
+        <a [routerLink]="['/http']">Angular HTTP</a>
+        ||
+        <a [routerLink]="['/ispiti']">Polozeni ispiti</a>
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </body>
 
 </html>

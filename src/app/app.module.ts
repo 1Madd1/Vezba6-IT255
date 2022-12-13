@@ -15,6 +15,19 @@ import { Studije } from './model/studije';
 import { MetService } from './services/metService';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { IspitiComponent } from './ispiti/ispiti.component';
+
+const routes: Routes = [
+  // osnovne rute
+  { path: '', redirectTo: 'student', pathMatch: 'full' },
+  { path: 'student', component: StudentcomponentComponent },
+  { path: 'buttongroup', component: ButtongroupcomponentComponent },
+  { path: 'forma', component: FormaComponent },
+  { path: 'di', component: DiComponent },
+  { path: 'http', component: SimpleHttpComponent },
+  { path: 'ispiti', component: IspitiComponent },]
+  
 
 @NgModule({
   declarations: [
@@ -25,14 +38,16 @@ import { HttpClientModule } from '@angular/common/http';
     ListaProfesoraiStudenataComponent,
     FormaComponent,
     DiComponent,
-    SimpleHttpComponent
+    SimpleHttpComponent,
+    IspitiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [Studije, MetService],
   bootstrap: [AppComponent]
